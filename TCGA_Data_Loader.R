@@ -1,6 +1,7 @@
 # Preamble
 ################################################################################
 # Title : TCGA Data Loader
+# Author: Muhammad Owais Bawany
 # INPUT : TCGA website datasets of your choosing
 # OUTPUT: TCGA datasets
 # Date  : 20-09-2017 
@@ -69,6 +70,7 @@ data_miRNA_Seq <- GDCprepare(query_miRNA_Seq, save = TRUE, save.filename = exp_f
 # Saving .Rda into .txt
 exp_filename = paste(project_names[i],"miRNA_Expression_Quantification.txt",sep="_")
 test <- as.data.frame(data_miRNA_Seq)
+
 write.csv(test, file=exp_filename)
 
 # Clear memory-intensive variables
